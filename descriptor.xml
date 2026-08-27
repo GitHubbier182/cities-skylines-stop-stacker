@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Stop Stacker</name>
+  <author>ScratchyBald</author>
+  <version>2.2.5</version>
+  <assembly>StopStacker.dll</assembly>
+  <description>Stacks busy bus stops with berth labels, live status bubbles, passenger wait positions, and multi-bus loading.</description>
+  <url></url>
+  <tags>Mod;Transport;Bus;Public Transport;Stops</tags>
+  <enabled>true</enabled>
+  <supportedVersions>
+    <version>1.0</version>
+  </supportedVersions>
+</ModMetaData>

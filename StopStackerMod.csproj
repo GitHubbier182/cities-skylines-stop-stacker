@@ -1,0 +1,70 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E4EF9D2-1C5E-4AF1-A7E7-43B6F5E49D11}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>StopStacker</RootNamespace>
+    <AssemblyName>StopStacker</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <LangVersion>7.3</LangVersion>
+    <RestoreProjectStyle>None</RestoreProjectStyle>
+    <RestorePackages>false</RestorePackages>
+    <EnableNuGetPackageRestore>false</EnableNuGetPackageRestore>
+    <ResolveNuGetPackages>false</ResolveNuGetPackages>
+    <RestoreTargets> </RestoreTargets>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(HOME)/Library/Application Support/Steam/steamapps/common/Cities_Skylines/Cities.app/Contents/Resources/Data/Managed/Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ColossalManaged">
+      <HintPath>$(HOME)/Library/Application Support/Steam/steamapps/common/Cities_Skylines/Cities.app/Contents/Resources/Data/Managed/ColossalManaged.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="ICities">
+      <HintPath>$(HOME)/Library/Application Support/Steam/steamapps/common/Cities_Skylines/Cities.app/Contents/Resources/Data/Managed/ICities.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(HOME)/Library/Application Support/Steam/steamapps/common/Cities_Skylines/Cities.app/Contents/Resources/Data/Managed/UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="CitiesHarmony.Harmony">
+      <HintPath>$(HOME)/Library/Application Support/Steam/steamapps/workshop/content/255710/2040656402/CitiesHarmony.Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Shared/OneTimeUpdateNoticePanel.cs" />
+    <Compile Include="Shared/ScratchysScanManager.cs" />
+    <Compile Include="Shared/UnifiedTransitLauncherToolbar.cs" />
+    <Compile Include="StopStackerScanCoordinator.cs" />
+    <Compile Include="StopStackerDiagnostics.cs" />
+    <Compile Include="StopStackerMod.cs" />
+    <Compile Include="Compatibility\BusStopPositionHarmony.cs" />
+    <Compile Include="Compatibility\IptEssentialsPassengerStatsCompatibility.cs" />
+    <Compile Include="Compatibility\PassengerWaitPositionHarmony.cs" />
+    <Compile Include="Data\StopStackerDisabledStops.cs" />
+    <Compile Include="Data\StopStackerModSettings.cs" />
+    <Compile Include="Data\StopStackerSerializableExtension.cs" />
+    <Compile Include="UI\StopStackerLauncherButton.cs" />
+    <Compile Include="Visuals\StopStackerBerthOverlay.cs" />
+    <Compile Include="Simulation\BusDwellReduction.cs" />
+    <Compile Include="Simulation\MultiBusStopService.cs" />
+  </ItemGroup>
+
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
+</Project>
